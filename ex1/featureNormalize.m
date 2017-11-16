@@ -21,18 +21,13 @@ sigma = zeros(1, size(X, 2));
 %               Note that X is a matrix where each column is a 
 %               feature and each row is an example. You need 
 %               to perform the normalization separately for 
-%               each feature. 
-%
+%               each feature.
 % Hint: You might find the 'mean' and 'std' functions useful.
-%       
+       
+mu = mean(X);
+sigma = std(X);
 
-
-
-
-
-
-
-
+X_norm = (X - (ones(size(X,1),1) * mu)) ./ (ones(size(X,1),1) * sigma);
 
 % ============================================================
 
